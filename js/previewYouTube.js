@@ -17,10 +17,12 @@ for (n = 0; n < v.length; n++) {
     y.appendChild(c);
     y.onclick = function() {
         var a = document.createElement("iframe");
-        a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0");
+        a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0&mute=1&controls=0");
         a.setAttribute("allowfullscreen","");
+        a.setAttribute("muted","");
         a.style.width = this.style.width;
         a.style.height = this.style.height;
         this.parentNode.replaceChild(a, this)
     }
 };
+

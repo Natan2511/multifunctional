@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The order is accepted</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="nofollow" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  </head>
+
+  <body>
+    <h1>Your order has been accepted!</h1>
+
+    <p>
+      Thank you for your order!<br />
+      Our operator will contact you shortly. Please enable your contact phone
+      number.
+    </p>
+
+    <table style="margin: auto">
+      <tbody>
+        <tr>
+          <th>You ordered</th>
+          <td>
+            <p>Multifunction screwdriver 115 in 1</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Order №</th>
+          <td>543536772</td>
+        </tr>
+
+        <tr>
+          <th>Done</th>
+          <td class="time"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      // Создание объекта даты
+      const now = new Date();
+
+      // Получение строки с текущей датой и временем в часовом поясе Америки/Нью-Йорка
+      const dateOptions = { timeZone: "America/New_York" };
+      const dateString = now.toLocaleString("en-US", dateOptions);
+
+      const time = document.querySelector(".time");
+      time.innerHTML = dateString;
+    </script>
+  </body>
+</html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/Montserrat.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="modal/modal.css" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Multifunction screwdriver 115 in 1" />
     <meta
@@ -69,7 +70,7 @@
             </div>
           </div>
         </div>
-        <a href="#order_form" class="button">Buy it now</a>
+        <a href="#buy" class="button">Buy it now</a>
         <div class="products_count">
           That's all that's left <b>16</b> pcs. in stock
         </div>
@@ -108,7 +109,7 @@
               <h4>Compact size 157 by 103 mm</h4>
             </div>
           </div>
-          <a href="#order_form" class="button">Buy it now</a>
+          <a href="#buy" class="button">Buy it now</a>
           <img src="images/img.jpg" alt="" />
         </section>
       </section>
@@ -143,7 +144,7 @@
             work, With case, With replaceable bits, Reversible
           </li>
         </ul>
-        <a href="#order_form" class="button">Buy it now</a>
+        <a href="#buy" class="button">Buy it now</a>
       </section>
       <!-- /benefits -->
       <!-- reviews 2 -->
@@ -214,7 +215,7 @@
             </div>
           </div>
         </div>
-        <a href="#order_form" class="button">Buy it now</a>
+        <a href="#buy" class="button">Buy it now</a>
       </section>
       <!-- /reviews 2 -->
       <!-- order steps 2 -->
@@ -224,25 +225,13 @@
           <img src="images/order_steps__step1_icon.png" alt="" />
           <div class="separator"></div>
           <h4>Application</h4>
-          <p>You leave an application on the website</p>
-        </div>
-        <div class="step_item">
-          <img src="images/order_steps__step2_icon.png" alt="" />
-          <div class="separator"></div>
-          <h4>Calling</h4>
-          <p>Our manager clarifies the details of the order</p>
+          <p>Place an order on our website by clicking the buy it now button</p>
         </div>
         <div class="step_item">
           <img src="images/order_steps__step3_icon.png" alt="" />
           <div class="separator"></div>
-          <h4>Dispatch</h4>
-          <p>We deliver your product within<br />3-10 business days</p>
-        </div>
-        <div class="step_item">
-          <img src="images/order_steps__step4_icon.png" alt="" />
-          <div class="separator"></div>
           <h4>Receipt</h4>
-          <p>Pay upon receipt at the post office</p>
+          <p>In 2-3 days you will receive the goods.</p>
         </div>
       </div>
       <!-- /order steps 2 -->
@@ -292,18 +281,44 @@
           </div>
         </div>
         <div class="action_text">
-          <a id="btn3" class="button">Buy it now</a>
-          <input
-            type="hidden"
-            name="l"
-            value="6302ff289d40a67aeb444d4f297fbc4526c26067"
-          />
-          <input
-            type="hidden"
-            name="c684d57ff10612486001389b1dd480267ef57db2"
-            value="YTkxNGUxZWYwN2U0ZTRhOTFiNDFhZTJmYzkzZjc5YmQ1MzY="
-          />
-        </form>
+
+          <button type="button" id="buy" class="button" >Buy it now</button>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 style="margin-bottom: 20px;">Order Details:</h2>
+                <form action="" method="POST" id="order_form">
+                  <input type="hidden" name="total" value="19.99"/>
+                  <input type="hidden" name="name" value="Multifunction screwdriver 115 in 1"/>
+                  <input type="hidden" name="currency" value="$"/>
+                  <input type="hidden" name="website" value="https://krq.perfomansdeal.me"/>
+                  <input type="hidden" name="order" value="543536772"/>
+                  <input type="hidden" name="route-success" value="https://krq.perfomansdeal.me/lander/otvertki/success.html"/>
+                  <input type="hidden" name="route-failed" value="https://krq.perfomansdeal.me/lander/otvertki/unsuccess.html"/>
+
+                  <input class="field" type="email" name="email" placeholder="Enter your email" required="Fill in this field">
+                  <input class="field" type="text" name="first-name" placeholder="Enter your full name" required="Fill in this field">
+
+                  <select type="country" name="country" class="field " required="Fill in this field">
+                    <option selected="" value="not-specified">Country</option>
+                    <option value="Сanada">Canada</option>
+                    <option value="United-States">United States</option>
+                    <option value="United-Kingdom">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New-zealand">New Zealand</option>
+                  </select>
+
+                  <input class="field" type="city" name="city" placeholder="Сity" required="Fill in this field">
+                  <input class="field" type="street" name="street" placeholder="Street" required="Fill in this field">
+                  <input class="field" type="zip" name="zip" placeholder="Zip" required="Fill in this field">
+                  <input class="field" type="tel" name="phone" placeholder="Enter your phone number" required="Fill in this field">
+
+                  <button type="button" id="click-me-btn" class="button">Next</button>
+                </form>
+            </div>
+          </div>
+
         <div class="products_count">
           That's all that's left <b>16</b> pcs. in stock
         </div>
@@ -322,28 +337,16 @@
           >
         </p>
       </footer>
-      <!-- /footer -->
     </div>
+
+    <script defer src="./js/modal.js"></script>
+    <script defer src="./modal/modal.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <link type="text/css" rel="stylesheet" href="css/roboto.css" />
     <script type="text/javascript" src="js/yasoblock-v2.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/copyrights.js"></script>
 
-	<script>
-		const btn3 = document.querySelector("#btn3");
-		btn3.addEventListener("click", action);
-  
-		function action() {
-		  window.location.replace(
-			atob(
-				"aHR0cHM6Ly9jaGVja291dC5wZXJmb21hbnNkZWFsLm1lL2NoZWNrb3V0Lz9vcmRlcj1KVGRDSlRCQkpUSXdKVEl3SlRJd0pUSXdKVEl5Ym1GdFpTVXlNaVV6UVNVeU1DVXlNbTExYkhScFpuVnVZM1JwYjI1aGJDVXlNSE5qY21WM1pISnBkbVZ5SlRJd01URTFKVEl3YVc0bE1qQXhKVEl5SlRKREpUQkJKVEl3SlRJd0pUSXdKVEl3SlRJeVpHVnpZM0pwY0hScGIyNGxNaklsTTBFbE1qQWxNakpFYVhOamIzVnVkQ1V5TURVd0pUSTFKVEl5SlRKREpUQkJKVEl3SlRJd0pUSXdKVEl3SlRJeWNISnBZMlVsTWpJbE0wRWxNakF4T1M0NU9TVXlReVV3UVNVeU1DVXlNQ1V5TUNVeU1DVXlNbUZ0YjNWdWRDVXlNaVV6UVNVeU1ERWxNa01sTUVFbE1qQWxNakFsTWpBbE1qQWxNakpwYldGblpTVXlNaVV6UVNVeU1DVXlNbWgwZEhCekpUTkJKVEpHSlRKR2FTNXBZbUl1WTI4bE1rWlNPVlJuVkVod0pUSkdVMk55WldWdWMyaHZkQzAxTmpNdWFuQm5KVEl5SlRKREpUQkJKVEl3SlRJd0pUSXdKVEl3SlRJeWNHRjVkWEpzSlRJeUpUTkJKVEl3SlRJeUpUSXlKVEpESlRCQkpUSXdKVEl3SlRJd0pUSXdKVEl5WTNWeWNtVnVZM2tsTWpJbE0wRWxNakFsTWpJbE1qUWxNaklsTWtNbE1FRWxNakFsTWpBbE1qQWxNakFsTWpKemRXTmpaWE56WDNWeWJDVXlNaVV6UVNVeU1DVXlNbXR5Y1M1d1pYSm1iMjFoYm5Oa1pXRnNMbTFsSlRKR2JHRnVaR1Z5SlRKR2IzUjJaWEowYTJrbE1rWnpkV05qWlhOekxtaDBiV3dsTWpJbE1rTWxNRUVsTWpBbE1qQWxNakFsTWpBbE1qSm1ZV2xzWldSZmRYSnNKVEl5SlROQkpUSXdKVEl5YTNKeExuQmxjbVp2YldGdWMyUmxZV3d1YldVbE1rWnNZVzVrWlhJbE1rWnZkSFpsY25ScmFTVXlSblZ1YzNWalkyVnpjeTVvZEcxc0pUSXlKVEJCSlRkRSZsYW5nPWVu"
-			)
-		  );
-		  const decodedString = atob(encodedString);
-		  window.location.replace(decodedString);
-		}
-	  </script>
     <script type="text/javascript">
       var phonePrefix = "+7";
     </script>

@@ -37,7 +37,7 @@ b {
 .button {
 	display: block;
 	margin: 10px auto;
-	width: 350px;
+	width: 340px;
 	height: 80px;
 	border: none;
 	-webkit-border-radius: 40px;
@@ -658,43 +658,6 @@ section .image {
 	color: #999;
 }
 
-.offer_section .field {
-	display: block;
-	margin: 0 auto 20px;
-	padding: 0 20px 0 62px;
-	width: 370px;
-	height: 72px;
-	border: none;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	color: #777;
-}
-
-.offer_section .field[name='name'] {
-	background: #ebebeb url(../images/offer__name_icon.png) 22px center no-repeat;
-}
-
-.offer_section .field[name='phone'] {
-	margin: 0 auto 35px;
-	background: #ebebeb url(../images/offer__phone_icon.png) 20px center no-repeat;
-}
-
-.offer_section.offer3 .field {
-	border: 1px solid #dedede;
-}
-
-.offer_section.offer3 .field[name='name'] {
-	background: #f0f0f0 url(../images/offer__name_icon.png) 22px center no-repeat;
-}
-
-.offer_section.offer3 .field[name='phone'] {
-	margin: 0 auto 35px;
-	background: #f0f0f0 url(../images/offer__phone_icon.png) 20px center no-repeat;
-}
 
 .offer_section .field::-webkit-input-placeholder {
 	opacity: 1;
@@ -2225,10 +2188,11 @@ section .image {
 }
 
 .order_steps2 .step_item {
-	float: left;
-	margin: 0 2px 2px 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
 	padding: 30px 60px 0 30px;
-	width: 239px;
 	height: 239px;
 	-webkit-box-shadow: 0 0 0 1px #ebebeb;
 	-moz-box-shadow: 0 0 0 1px #ebebeb;
@@ -2317,3 +2281,4 @@ section .image {
 .action_text>p{
 	color: #999999;
 }
+
